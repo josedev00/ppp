@@ -1,5 +1,1 @@
-fastapi[standard]
-python-jose
-passlib
-bcrypt
-pymongo
+pip install --upgrade pip && pip install "fastapi[standard]" PyJWT bcrypt pymongo uvicorn
