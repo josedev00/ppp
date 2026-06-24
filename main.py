@@ -26,12 +26,6 @@ async def url():
     return {"url": "https://mouredev.com/python"}
 
 
-######### static imagnes ########
-
-from fastapi.staticfiles import StaticFiles 
-app.mount("/static",StaticFiles(directory="static"),name = "static")
-#navegador:
-#http://127.0.0.1:8000/static/images/python.jpg
 
 
 # Inicia el server: uvicorn main:app --reload
