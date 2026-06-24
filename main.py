@@ -1,6 +1,9 @@
 from fastapi import FastAPI
-from routers import products, users , basic_auth_users , jwt_auth_users,users_db
-
+import products
+import users
+import basic_auth_users
+import jwt_auth_users
+import users_db
 
 app = FastAPI()
 
