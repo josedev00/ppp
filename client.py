@@ -8,13 +8,16 @@
 # Ejecución: sudo mongod --dbpath "/path/a/la/base/de/datos/"
 # Conexión: mongodb://localhost
 
+import os
 from pymongo import MongoClient
 
-# Descomentar el db_client local o remoto correspondiente
+# 1. Intentamos leer la base de datos en la nube (Render)
+# 2. Si no existe esa variable, por defecto usa su Docker local
+MONGO_URL = os.environ.get("MONGO_URL", "mongodb://localhost:27017/")
 
-# Base de datos local MongoDB
-db_client = MongoClient("mongodb://localhost:27017/").local # esto me toco diferente abjo se explica
-
+# Conectamos usando la URL correcta y entramos a la base de datos 'local'
+client = MongoClient(MONGO_URL)
+db_client = client.local
 # Clase en vídeo: https://youtu.be/_y9qQZXE24A?t=25470
 
 # Base de datos remota MongoDB Atlas (https://mongodb.com)
