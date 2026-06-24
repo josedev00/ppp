@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from routers import products, users , basic_auth_users , jwt_auth_users,users_db
-
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 app = FastAPI()
 
