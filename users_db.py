@@ -1,8 +1,8 @@
 ### Users DB API ###
 
 from fastapi import APIRouter, HTTPException, status
-from db.models.user import User
-from db.schemas.user import user_schema, users_schema
+from db.models import User
+from db.schemas import user_schema, users_schema
 from db.client import db_client
 from bson import ObjectId
 
